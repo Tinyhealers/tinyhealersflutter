@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- iOS Meta Tags & Icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Tinyhealers">
+
+  <!-- PWA Icons -->
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Web Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Title -->
+  <title>Tinyhealers</title>
+
+  <style>
+    #installButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0175C2;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 9999;
+      display: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+<!-- PWA Install Button -->
+<button id="installButton">Install App</button>
+
+<!-- Load Flutter web bootstrap script -->
+<script src="flutter_bootstrap.js" defer></script>
+
+<!-- Service Worker and BeforeInstallPrompt Handling -->
+<script>
+  // Service Worker Registration
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
+    });
+  }
+
+  // Handle PWA Installation
+  let deferredPrompt;
+  const installButton = document.getElementById('installButton');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing on mobile
+    e.preventDefault();
+
+    // Stash the event so it can be triggered later
+    deferredPrompt = e;
+
+    // Show the install button
+    installButton.style.display = 'block';
+
+    // Optional: Notify Flutter if using inappwebview
+    if (window.flutter_inappwebview && window.flutter_inappwebview.callHandler) {
+      window.flutter_inappwebview.callHandler('pwaInstallAvailable');
+    }
+  });
+
+  // Button click handler
+  installButton.addEventListener('click', async () => {
+    if (!deferredPrompt) {
+      return;
+    }
+
+    // Show the install prompt
+    deferredPrompt.prompt();
+
+    // Wait for the user to respond to the prompt
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(`User response to the install prompt: ${outcome}`);
+
+    // Clear the deferredPrompt variable
+    deferredPrompt = null;
+
+    // Hide the install button
+    installButton.style.display = 'none';
+  });
+
+  // Hide the button when the PWA is installed
+  window.addEventListener('appinstalled', () => {
+    console.log('PWA was installed');
+    installButton.style.display = 'none';
+  });
+</script>
+</body>
+</html>
