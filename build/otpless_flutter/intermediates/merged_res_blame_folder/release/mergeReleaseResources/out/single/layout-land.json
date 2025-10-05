@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.otpless.otplessflutter.otpless_flutter-release-42:/layout-land/mtrl_picker_header_dialog.xml",
+        "source": "com.otpless.otplessflutter.otpless_flutter-material-1.12.0-34:/layout-land/mtrl_picker_header_dialog.xml"
+    },
+    {
+        "merged": "com.otpless.otplessflutter.otpless_flutter-release-42:/layout-land/material_timepicker.xml",
+        "source": "com.otpless.otplessflutter.otpless_flutter-material-1.12.0-34:/layout-land/material_timepicker.xml"
+    },
+    {
+        "merged": "com.otpless.otplessflutter.otpless_flutter-release-42:/layout-land/material_clock_period_toggle_land.xml",
+        "source": "com.otpless.otplessflutter.otpless_flutter-material-1.12.0-34:/layout-land/material_clock_period_toggle_land.xml"
+    }
+]

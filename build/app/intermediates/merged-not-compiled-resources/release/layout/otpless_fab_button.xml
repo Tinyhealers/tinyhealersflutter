@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:background="@drawable/otpless_fab_bg"
+    android:text="@string/otpless_go_otpless"
+    android:gravity="center"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:textAllCaps="false"
+    android:autoSizeMaxTextSize="18sp"
+    android:autoSizeMinTextSize="16sp"
+    android:textColor="@color/black"/>

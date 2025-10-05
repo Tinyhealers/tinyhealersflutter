@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.otpless.otplessflutter.otpless_flutter-release-42:/xml/otpless_network_security_config.xml",
+        "source": "com.otpless.otplessflutter.otpless_flutter-jetified-otpless-android-sdk-2.6.4-25:/xml/otpless_network_security_config.xml"
+    },
+    {
+        "merged": "com.otpless.otplessflutter.otpless_flutter-release-42:/xml/image_share_filepaths.xml",
+        "source": "com.otpless.otplessflutter.otpless_flutter-browser-1.6.0-19:/xml/image_share_filepaths.xml"
+    }
+]

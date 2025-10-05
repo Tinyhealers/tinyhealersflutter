@@ -1,6 +1,6 @@
+import 'dart:convert';
 import 'dart:math';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class OTPService {
@@ -13,38 +13,43 @@ class OTPService {
 
   Future<String> sendOTP(String phoneNumber, String otp) async {
     try {
-      await dotenv.load();
-      final apiKey = dotenv.env['SMS_API_KEY'];
-
       print('Preparing to send OTP to $phoneNumber');
       print(otp);
 
+      final uri = Uri.parse('https://tinyhealersnode.vercel.app/send-otp');
       final response = await http.post(
-        Uri.parse('https://www.fast2sms.com/dev/bulkV2'),
-        headers: {
-          'authorization': apiKey!,
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: {
-          'variables_values': otp,
-          'route': 'dlt',
-          'sender_id': 'TINY',
-          'message': '197889',
-          'numbers': phoneNumber,
-        },
+        uri,
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({'phoneNumber': phoneNumber, 'otp': otp}),
       );
 
-      print('Fast2SMS Response: ${response.body}');
+      print('Local send-otp response: ${response.body}');
 
-      // Store OTP in SharedPreferences
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString(_otpKey, otp);
-      print('OTP stored successfully');
+      if (response.statusCode != 200) {
+        print('Non-200 response from send-otp: ${response.statusCode}');
+        throw Exception('Failed to send OTP');
+      }
+
+      final Map<String, dynamic> data = response.body.isNotEmpty
+          ? jsonDecode(response.body) as Map<String, dynamic>
+          : <String, dynamic>{};
+
+      final bool success = data['return'] == true || data['return']?.toString() == 'true';
+
+      if (success) {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString(_otpKey, otp);
+        print('OTP stored successfully');
+      } else {
+        print('send-otp returned failure: ${response.body}');
+        final message = data['message'] ?? 'Unknown error';
+        throw Exception('Failed to send OTP: $message');
+      }
 
       return response.body;
     } catch (error) {
       print('Error sending OTP: $error');
-      throw Exception('Failed to send OTP');
+      rethrow;
     }
   }
 

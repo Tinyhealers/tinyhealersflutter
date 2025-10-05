@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/mukesh/.pub-cache/hosted/pub.dev/otpless_flutter-2.2.4/android"
+    name=":otpless_flutter"
+    type="LIBRARY"
+    maven="com.example.otpless_flutter:otpless_flutter:"
+    agpVersion="8.3.2"
+    buildFolder="/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/build/otpless_flutter"
+    bootClassPath="/Users/mukesh/Library/Android/sdk/platforms/android-34/android.jar:/Users/mukesh/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

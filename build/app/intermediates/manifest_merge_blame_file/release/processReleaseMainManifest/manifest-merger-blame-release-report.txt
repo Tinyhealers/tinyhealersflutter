@@ -1,0 +1,328 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.docon"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.CALL_PHONE" />
+11-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:2:5-68
+11-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:2:22-66
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:3:5-66
+12-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:3:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:4:5-78
+13-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:4:22-76
+14    <!--
+15         Required to query activities that can process text, see:
+16         https://developer.android.com/training/package-visibility and
+17         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+18
+19         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+20    -->
+21    <queries>
+21-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:44:5-49:15
+22        <intent>
+22-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:45:9-48:18
+23            <action android:name="android.intent.action.PROCESS_TEXT" />
+23-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:46:13-72
+23-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:46:21-70
+24
+25            <data android:mimeType="text/plain" />
+25-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:47:13-50
+25-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:47:19-48
+26        </intent>
+27
+28        <package android:name="com.whatsapp" />
+28-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:18:9-48
+28-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:18:18-45
+29        <package android:name="com.whatsapp.w4b" />
+29-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:19:9-52
+29-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:19:18-49
+30        <package android:name="com.otpless.app" />
+30-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:20:9-51
+30-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:20:18-48
+31        <package android:name="org.telegram.messenger" />
+31-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:21:9-58
+31-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:21:18-55
+32        <package android:name="jp.naver.line.android" />
+32-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:22:9-57
+32-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:22:18-54
+33        <package android:name="com.michatapp.im" />
+33-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:23:9-52
+33-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:23:18-49
+34        <package android:name="com.discord" />
+34-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:24:9-47
+34-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:24:18-44
+35        <package android:name="com.Slack" />
+35-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:25:9-45
+35-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:25:18-42
+36        <package android:name="com.viber.voip" />
+36-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:26:9-50
+36-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:26:18-47
+37        <package android:name="org.thoughtcrime.securesms" />
+37-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:27:9-62
+37-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:27:18-59
+38        <package android:name="im.thebot.messenger" />
+38-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:28:9-55
+38-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:28:18-52
+39        <package android:name="com.truecaller" />
+39-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:29:9-50
+39-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:29:18-47
+40    </queries>
+41
+42    <uses-permission android:name="android.permission.GET_SIGNATURES" />
+42-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:11:5-73
+42-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:11:22-70
+43    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+43-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:13:5-76
+43-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:13:22-73
+44    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+44-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:14:5-76
+44-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:14:22-73
+45    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+45-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:15:5-79
+45-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:15:22-76
+46
+47    <permission
+47-->[androidx.core:core:1.13.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/926a55876ca23f1cf9283404a0c2dea1/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+48        android:name="com.example.docon.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+48-->[androidx.core:core:1.13.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/926a55876ca23f1cf9283404a0c2dea1/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+49        android:protectionLevel="signature" />
+49-->[androidx.core:core:1.13.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/926a55876ca23f1cf9283404a0c2dea1/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+50
+51    <uses-permission android:name="com.example.docon.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+51-->[androidx.core:core:1.13.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/926a55876ca23f1cf9283404a0c2dea1/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+51-->[androidx.core:core:1.13.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/926a55876ca23f1cf9283404a0c2dea1/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+52
+53    <application
+54        android:name="android.app.Application"
+54-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:8:9-42
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.13.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/926a55876ca23f1cf9283404a0c2dea1/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+56        android:extractNativeLibs="true"
+57        android:icon="@mipmap/ic_launcher"
+57-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:9:9-43
+58        android:label="Tinyhealers" >
+58-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:7:9-36
+59        <activity
+59-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:10:9-32:20
+60            android:name="com.example.docon.MainActivity"
+60-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:11:13-41
+61            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+61-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:16:13-163
+62            android:exported="true"
+62-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:12:13-36
+63            android:hardwareAccelerated="true"
+63-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:17:13-47
+64            android:launchMode="singleTop"
+64-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:13:13-43
+65            android:taskAffinity=""
+65-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:14:13-36
+66            android:theme="@style/LaunchTheme"
+66-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:15:13-47
+67            android:windowSoftInputMode="adjustResize" >
+67-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:18:13-55
+68
+69            <!--
+70                 Specifies an Android theme to apply to this Activity as soon as
+71                 the Android process has started. This theme is visible to the user
+72                 while the Flutter UI initializes. After that, this theme continues
+73                 to determine the Window background behind the Flutter UI.
+74            -->
+75            <meta-data
+75-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:23:13-26:17
+76                android:name="io.flutter.embedding.android.NormalTheme"
+76-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:24:15-70
+77                android:resource="@style/NormalTheme" />
+77-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:25:15-52
+78
+79            <intent-filter>
+79-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:27:13-30:29
+80                <action android:name="android.intent.action.MAIN" />
+80-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:28:17-68
+80-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:28:25-66
+81
+82                <category android:name="android.intent.category.LAUNCHER" />
+82-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:29:17-76
+82-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:29:27-74
+83            </intent-filter>
+84        </activity>
+85        <!--
+86             Don't delete the meta-data below.
+87             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+88        -->
+89        <meta-data
+89-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:35:9-37:33
+90            android:name="flutterEmbedding"
+90-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:36:13-44
+91            android:value="2" />
+91-->/Users/mukesh/Documents/Naresh/Work/Pratheek/docon/android/app/src/main/AndroidManifest.xml:37:13-30
+92
+93        <activity
+93-->[:url_launcher_android] /Users/mukesh/Documents/Naresh/Work/Pratheek/docon/build/url_launcher_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:8:9-11:74
+94            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+94-->[:url_launcher_android] /Users/mukesh/Documents/Naresh/Work/Pratheek/docon/build/url_launcher_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:9:13-74
+95            android:exported="false"
+95-->[:url_launcher_android] /Users/mukesh/Documents/Naresh/Work/Pratheek/docon/build/url_launcher_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:10:13-37
+96            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+96-->[:url_launcher_android] /Users/mukesh/Documents/Naresh/Work/Pratheek/docon/build/url_launcher_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:11:13-71
+97
+98        <receiver
+98-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:33:9-40:20
+99            android:name="com.otpless.main.OtplessZeroTapReceiver"
+99-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:34:13-67
+100            android:enabled="true"
+100-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:35:13-35
+101            android:exported="true" >
+101-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:36:13-36
+102            <intent-filter>
+102-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:37:13-39:29
+103                <action android:name="com.whatsapp.otp.OTP_RETRIEVED" />
+103-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:38:17-73
+103-->[io.github.otpless-tech:otpless-android-sdk:2.6.4] /Users/mukesh/.gradle/caches/8.10.2/transforms/92ee41d8695de761b04ed7a8aa2973dc/transformed/jetified-otpless-android-sdk-2.6.4/AndroidManifest.xml:38:25-70
+104            </intent-filter>
+105        </receiver>
+106
+107        <uses-library
+107-->[androidx.window:window:1.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/120c2458cfd33579b6bba0da2a9fe72d/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+108            android:name="androidx.window.extensions"
+108-->[androidx.window:window:1.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/120c2458cfd33579b6bba0da2a9fe72d/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+109            android:required="false" />
+109-->[androidx.window:window:1.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/120c2458cfd33579b6bba0da2a9fe72d/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+110        <uses-library
+110-->[androidx.window:window:1.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/120c2458cfd33579b6bba0da2a9fe72d/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+111            android:name="androidx.window.sidecar"
+111-->[androidx.window:window:1.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/120c2458cfd33579b6bba0da2a9fe72d/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+112            android:required="false" />
+112-->[androidx.window:window:1.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/120c2458cfd33579b6bba0da2a9fe72d/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+113
+114        <activity
+114-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+115            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+115-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+116            android:excludeFromRecents="true"
+116-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+117            android:exported="false"
+117-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+118            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+118-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+119        <!--
+120            Service handling Google Sign-In user revocation. For apps that do not integrate with
+121            Google Sign-In, this service will never be started.
+122        -->
+123        <service
+123-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+124            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+124-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+125            android:exported="true"
+125-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+126            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+126-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+127            android:visibleToInstantApps="true" />
+127-->[com.google.android.gms:play-services-auth:20.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/64f6d2812964a202783efdb4eb480fc7/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+128
+129        <activity
+129-->[com.google.android.gms:play-services-base:18.0.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/2d5b00c57cd177a6495739e19ef46078/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+130            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+130-->[com.google.android.gms:play-services-base:18.0.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/2d5b00c57cd177a6495739e19ef46078/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+131            android:exported="false"
+131-->[com.google.android.gms:play-services-base:18.0.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/2d5b00c57cd177a6495739e19ef46078/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+132            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+132-->[com.google.android.gms:play-services-base:18.0.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/2d5b00c57cd177a6495739e19ef46078/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+133
+134        <meta-data
+134-->[com.google.android.gms:play-services-basement:18.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/8af79118b0426c62975c81ac6295b517/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+135            android:name="com.google.android.gms.version"
+135-->[com.google.android.gms:play-services-basement:18.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/8af79118b0426c62975c81ac6295b517/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+136            android:value="@integer/google_play_services_version" />
+136-->[com.google.android.gms:play-services-basement:18.2.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/8af79118b0426c62975c81ac6295b517/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+137
+138        <receiver
+138-->[io.github.otpless-tech:tesseract:0.1.7] /Users/mukesh/.gradle/caches/8.10.2/transforms/8467605e1bc3033e85ddd5417514247f/transformed/jetified-tesseract-0.1.7/AndroidManifest.xml:10:9-17:20
+139            android:name="com.otpless.tesseract.sim.OtplessSimStateReceiver"
+139-->[io.github.otpless-tech:tesseract:0.1.7] /Users/mukesh/.gradle/caches/8.10.2/transforms/8467605e1bc3033e85ddd5417514247f/transformed/jetified-tesseract-0.1.7/AndroidManifest.xml:11:13-77
+140            android:enabled="true"
+140-->[io.github.otpless-tech:tesseract:0.1.7] /Users/mukesh/.gradle/caches/8.10.2/transforms/8467605e1bc3033e85ddd5417514247f/transformed/jetified-tesseract-0.1.7/AndroidManifest.xml:12:13-35
+141            android:exported="true" >
+141-->[io.github.otpless-tech:tesseract:0.1.7] /Users/mukesh/.gradle/caches/8.10.2/transforms/8467605e1bc3033e85ddd5417514247f/transformed/jetified-tesseract-0.1.7/AndroidManifest.xml:13:13-36
+142            <intent-filter>
+142-->[io.github.otpless-tech:tesseract:0.1.7] /Users/mukesh/.gradle/caches/8.10.2/transforms/8467605e1bc3033e85ddd5417514247f/transformed/jetified-tesseract-0.1.7/AndroidManifest.xml:14:13-16:29
+143                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+143-->[io.github.otpless-tech:tesseract:0.1.7] /Users/mukesh/.gradle/caches/8.10.2/transforms/8467605e1bc3033e85ddd5417514247f/transformed/jetified-tesseract-0.1.7/AndroidManifest.xml:15:17-82
+143-->[io.github.otpless-tech:tesseract:0.1.7] /Users/mukesh/.gradle/caches/8.10.2/transforms/8467605e1bc3033e85ddd5417514247f/transformed/jetified-tesseract-0.1.7/AndroidManifest.xml:15:25-79
+144            </intent-filter>
+145        </receiver>
+146
+147        <provider
+147-->[androidx.emoji2:emoji2:1.3.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/1b932e7d3e4614c020d38e0c1f6c4d9d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+148            android:name="androidx.startup.InitializationProvider"
+148-->[androidx.emoji2:emoji2:1.3.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/1b932e7d3e4614c020d38e0c1f6c4d9d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+149            android:authorities="com.example.docon.androidx-startup"
+149-->[androidx.emoji2:emoji2:1.3.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/1b932e7d3e4614c020d38e0c1f6c4d9d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+150            android:exported="false" >
+150-->[androidx.emoji2:emoji2:1.3.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/1b932e7d3e4614c020d38e0c1f6c4d9d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+151            <meta-data
+151-->[androidx.emoji2:emoji2:1.3.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/1b932e7d3e4614c020d38e0c1f6c4d9d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+152                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+152-->[androidx.emoji2:emoji2:1.3.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/1b932e7d3e4614c020d38e0c1f6c4d9d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+153                android:value="androidx.startup" />
+153-->[androidx.emoji2:emoji2:1.3.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/1b932e7d3e4614c020d38e0c1f6c4d9d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+154            <meta-data
+154-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/ed8612b2c4d57e33fdb06bf035e28864/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+155                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+155-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/ed8612b2c4d57e33fdb06bf035e28864/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+156                android:value="androidx.startup" />
+156-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/mukesh/.gradle/caches/8.10.2/transforms/ed8612b2c4d57e33fdb06bf035e28864/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+157            <meta-data
+157-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+158                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+158-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+159                android:value="androidx.startup" />
+159-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+160        </provider>
+161
+162        <receiver
+162-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+163            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+164            android:directBootAware="false"
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+165            android:enabled="true"
+165-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+166            android:exported="true"
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+167            android:permission="android.permission.DUMP" >
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+168            <intent-filter>
+168-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+169                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+170            </intent-filter>
+171            <intent-filter>
+171-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+172                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+173            </intent-filter>
+174            <intent-filter>
+174-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+175                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+175-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+175-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+176            </intent-filter>
+177            <intent-filter>
+177-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+178                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+178-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+178-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/mukesh/.gradle/caches/8.10.2/transforms/3374c326c9084e55c074fe4486a91dcd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+179            </intent-filter>
+180        </receiver>
+181    </application>
+182
+183</manifest>
